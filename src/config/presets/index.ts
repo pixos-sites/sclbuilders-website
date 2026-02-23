@@ -11,4 +11,4 @@ export const presets: Record<string, BusinessPreset> = {
   sclbuildersltd: sclbuildersltdPreset,
 };
 
-export const defaultPreset = plumberPreset;
+export const defaultPreset = sclbuildersltdPreset;
