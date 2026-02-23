@@ -16,6 +16,8 @@ export type IconKey =
 export interface BrandTokens {
   companyName: string;
   shortName: string;
+  logoImageSrc?: string;
+  logoImageAlt?: string;
   fontBody: string;
   fontHeading: string;
   accent: string;

@@ -15,7 +15,13 @@ export function Navbar({ preset }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <a href="#" className="flex items-center gap-2 shrink-0">
-            {preset.brand.useBsLogo ? (
+            {preset.brand.logoImageSrc ? (
+              <img
+                src={preset.brand.logoImageSrc}
+                alt={preset.brand.logoImageAlt ?? `${preset.brand.companyName} logo`}
+                className="h-10 lg:h-12 w-auto rounded-sm"
+              />
+            ) : preset.brand.useBsLogo ? (
               <BSLogo className="h-10 lg:h-12 w-auto" />
             ) : (
               <div className="flex items-center gap-2.5">
@@ -42,7 +48,7 @@ export function Navbar({ preset }: NavbarProps) {
               </div>
             )}
             <span
-              className={`${preset.brand.useBsLogo ? "lg:hidden" : "sm:hidden"} text-[#1A1A1A] font-bold tracking-tight`}
+              className={`${preset.brand.useBsLogo || preset.brand.logoImageSrc ? "lg:hidden" : "sm:hidden"} text-[#1A1A1A] font-bold tracking-tight`}
               style={{ fontSize: "1rem" }}
             >
               {preset.brand.mobileNavLabel ?? preset.brand.companyName}

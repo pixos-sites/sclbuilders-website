@@ -5,6 +5,8 @@ export const sclbuildersltdPreset: BusinessPreset = {
   brand: {
     companyName: "SCL Builders LTD",
     shortName: "SCL",
+    logoImageSrc: "/images/sclbuildersltd/SCL_logo.png",
+    logoImageAlt: "SCL Builders LTD logo",
     fontBody: "'Inter', sans-serif",
     fontHeading: "'DM Serif Display', serif",
     accent: "#C6A34A",

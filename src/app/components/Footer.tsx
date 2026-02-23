@@ -15,7 +15,14 @@ export function Footer({ preset }: FooterProps) {
         <div className="py-12 lg:py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              {preset.brand.useBsLogo ? (
+              {preset.brand.logoImageSrc ? (
+                <img
+                  src={preset.brand.logoImageSrc}
+                  alt={preset.brand.logoImageAlt ?? `${preset.brand.companyName} logo`}
+                  className="h-14 w-auto rounded-md"
+                  style={{ backgroundColor: "#FFFFFF", padding: "0.25rem 0.5rem" }}
+                />
+              ) : preset.brand.useBsLogo ? (
                 <BSLogo className="h-12 w-auto" variant="white" />
               ) : (
                 <div className="flex items-center gap-3">
